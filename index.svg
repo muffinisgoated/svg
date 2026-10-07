@@ -1,209 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     width="100%"
-     height="100%"
-     viewBox="0 0 100 100"
-     preserveAspectRatio="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+>
+  <foreignObject
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+  >
+    <xhtml:div
+      xmlns="http://www.w3.org/1999/xhtml"
+      style="
+        width:100vw;
+        height:100vh;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+      "
+    >
 
-  <foreignObject x="0" y="0" width="100" height="100">
-    <xhtml:html lang="en">
-      <xhtml:head>
+      <xhtml:style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
 
-        <xhtml:meta charset="UTF-8" />
+        #_xi9j4u0 {
+          width: 100%;
+          height: 100%;
+        }
+      </xhtml:style>
 
-        <!-- Make all relative HTML/CSS/JS paths resolve from xylora.org -->
-        <xhtml:base href="https://xylora.org/" />
+      <xhtml:div id="_xi9j4u0"></xhtml:div>
 
-        <xhtml:meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
+      <xhtml:link
+        rel="stylesheet"
+        href="https://xylora.org/assets/index-yqXGi6ZC-08bfbe96.css"
+      />
 
-        <xhtml:title>cherri</xhtml:title>
+      <xhtml:script src="https://xylora.org/gmteb/xaw0tb.js"></xhtml:script>
 
-        <xhtml:link
-          rel="icon"
-          type="image/svg+xml"
-          href="/favicon.svg"
-        />
+      <xhtml:script src="https://xylora.org/kqxhh/virti7.js"></xhtml:script>
 
-        <xhtml:style>
-          html,
-          body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-          }
+      <xhtml:script src="https://xylora.org/assets/bundle-zvx8twxc.js"></xhtml:script>
 
-          body {
-            background: transparent;
-          }
-
-          #_xi9j4u0 {
-            width: 100%;
-            height: 100%;
-          }
-
-          foreignObject {
-            overflow: visible;
-          }
-        </xhtml:style>
-
-        <xhtml:script>
-          <![CDATA[
-          (function () {
-            var XHTML_NS = "http://www.w3.org/1999/xhtml";
-
-            var foreignObject =
-              document.querySelector("foreignObject");
-
-            if (!foreignObject) return;
-
-            var root = foreignObject.firstElementChild;
-
-            if (!root) return;
-
-            var origCE = document.createElement.bind(document);
-            var origCENS = document.createElementNS.bind(document);
-
-            try {
-              Object.defineProperty(document, "head", {
-                get: function () {
-                  return root.querySelector("head");
-                },
-                configurable: true
-              });
-
-              Object.defineProperty(document, "body", {
-                get: function () {
-                  return root.querySelector("body");
-                },
-                configurable: true
-              });
-
-              Object.defineProperty(document, "documentElement", {
-                get: function () {
-                  return root;
-                },
-                configurable: true
-              });
-            } catch (e) {}
-
-            document.createElement = function (tag, options) {
-              if (typeof tag === "string") {
-                return origCENS(XHTML_NS, tag, options);
-              }
-
-              return origCE(tag, options);
-            };
-
-            document.createElementNS = function (ns, name, options) {
-              if (ns == null || ns === XHTML_NS) {
-                return origCENS(XHTML_NS, name, options);
-              }
-
-              return origCENS(ns, name, options);
-            };
-
-            try {
-              Object.defineProperty(document, "getElementById", {
-                value: function (id) {
-                  var escaped = String(id).replace(/["\\]/g, "\\$&");
-                  return root.querySelector('[id="' + escaped + '"]');
-                },
-                configurable: true,
-                writable: true
-              });
-            } catch (e) {}
-
-            document.getElementsByTagName = function (tag) {
-              return root.getElementsByTagNameNS(XHTML_NS, tag);
-            };
-
-            document.getElementsByTagNameNS = function (ns, tag) {
-              return root.getElementsByTagNameNS(ns, tag);
-            };
-
-            document.getElementsByClassName = function (className) {
-              return root.getElementsByClassName(className);
-            };
-
-            var originalQuerySelector =
-              document.querySelector.bind(document);
-
-            var originalQuerySelectorAll =
-              document.querySelectorAll.bind(document);
-
-            document.querySelector = function (selector) {
-              try {
-                return (
-                  root.querySelector(selector) ||
-                  originalQuerySelector(selector)
-                );
-              } catch (e) {
-                return originalQuerySelector(selector);
-              }
-            };
-
-            document.querySelectorAll = function (selector) {
-              try {
-                var result = root.querySelectorAll(selector);
-
-                return result.length
-                  ? result
-                  : originalQuerySelectorAll(selector);
-              } catch (e) {
-                return originalQuerySelectorAll(selector);
-              }
-            };
-          })();
-          ]]>
-        </xhtml:script>
-
-        <!-- Your JavaScript files -->
-        <xhtml:script src="/gmteb/xaw0tb.js"></xhtml:script>
-
-        <xhtml:script src="/kqxhh/virti7.js"></xhtml:script>
-
-        <!-- Google Analytics -->
-        <xhtml:script
-          async="async"
-          src="https://www.googletagmanager.com/gtag/js?id=G-N7TLL7J3HN">
-        </xhtml:script>
-
-        <xhtml:script>
-          <![CDATA[
-          window.dataLayer = window.dataLayer || [];
-
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-
-          gtag("js", new Date());
-          gtag("config", "G-N7TLL7J3HN");
-          ]]>
-        </xhtml:script>
-
-        <!-- CSS -->
-        <xhtml:link
-          rel="stylesheet"
-          href="/assets/index-yqXGi6ZC-08bfbe96.css"
-        />
-
-      </xhtml:head>
-
-      <xhtml:body>
-
-        <xhtml:div id="_xi9j4u0"></xhtml:div>
-
-        <!-- Main JavaScript bundle -->
-        <xhtml:script
-          src="/assets/bundle-zvx8twxc.js">
-        </xhtml:script>
-
-      </xhtml:body>
-    </xhtml:html>
+    </xhtml:div>
   </foreignObject>
 </svg>
